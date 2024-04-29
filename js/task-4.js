@@ -14,12 +14,12 @@ loginForm.addEventListener("submit", function(event) {
     return;
   }
   
-  const formData = {
+  const formValue = {
     email: emailValue,
     password: passwordValue
   };
   
-  console.log(formData); 
+  console.log(formValue); 
   
   loginForm.reset(); 
 });
