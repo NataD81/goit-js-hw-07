@@ -25,17 +25,21 @@ const controls = document.querySelector("#controls");
       destroyBoxes(); 
 
       let size = 30;
+      const fragment = document.createDocumentFragment();
       for (let i = 0; i < amount; i++) {
         const box = document.createElement("div");
         box.style.width = `${size}px`;
         box.style.height = `${size}px`;
         box.style.backgroundColor = getRandomHexColor();
         box.style.marginBottom = "10px";
-        boxesContainer.appendChild(box);
+        fragment.append(box);
         size += 10;
       }
+      boxesContainer.append(fragment);
     }
 
     function destroyBoxes() {
       boxesContainer.innerHTML = " ";
     }
+
+   

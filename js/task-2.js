@@ -27,8 +27,10 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-images.forEach(image => {
-  const html = `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}"></li>`;
+
+  const html = images.map((image) => {
+    return `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}"></li>`;
+  }).join("");
   gallery.insertAdjacentHTML("beforeend", html);
-});
+
  console.log(gallery);
